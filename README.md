@@ -44,8 +44,10 @@ and while pressed I short pressed RESET. Released RESET and after that
 released BOOTSEL. Now I could flash the firmware with this command
 ("port" might be different on your PC):
 
+```console
 esptool --port /dev/ttyACM0 --chip esp32s3 write_flash 0x00000
 firmware_SPIRAM_OCT_16MiB.bin --flash_mode dio --erase
+```
 
 After the successfull flash I unplugged the device, plugged it back in
 and was then able to connect to the device with the "Thonny" IDE, as
